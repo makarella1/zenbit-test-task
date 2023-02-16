@@ -13,12 +13,16 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "strictPropertyInitialization": false,
+    "experimentalDecorators": true,
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
       "@/ui/*": ["src/ui/*"],
-      "@/pages/*": ["src/pages/*"]
+      "@/pages/*": ["src/pages/*"],
+      "@/modules/*": ["src/modules/*"],
+      "@/assets/*": ["src/assets/*"]
     }
   },
   "include": ["src"],

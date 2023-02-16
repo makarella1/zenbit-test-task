@@ -12,7 +12,7 @@ export class FeedbackService {
   ) {}
 
   async createFeedback(feedback: FeedbackDto): Promise<void> {
-    const foundUser = this.feedbackRepository.findOne({
+    const foundUser = await this.feedbackRepository.findOne({
       where: { email: feedback.email },
     });
 
@@ -21,9 +21,5 @@ export class FeedbackService {
     }
 
     await this.feedbackRepository.save(feedback);
-  }
-
-  async getFeedback() {
-    return this.feedbackRepository.find();
   }
 }

@@ -5,6 +5,7 @@ const theme: DefaultTheme = {
   inputBorder: '#DCDCDC',
   colors: {
     main: '#FAD34F',
+    secondary: '#F472B7',
   },
 };
 

@@ -1,6 +1,6 @@
 import { IsEmail, IsNotEmpty, MinLength } from 'class-validator';
 
-export class FeedbackDto {
+export class Feedback {
   @IsNotEmpty({ message: 'Name is required' })
   @MinLength(2, {
     message: "Name's too short, should be at least 2 characters long",
@@ -8,7 +8,7 @@ export class FeedbackDto {
   name: string;
 
   @IsNotEmpty({ message: 'Email is required' })
-  @IsEmail()
+  @IsEmail({}, { message: "Doesn't look like an email" })
   email: string;
 
   @IsNotEmpty({ message: 'Message is required' })
