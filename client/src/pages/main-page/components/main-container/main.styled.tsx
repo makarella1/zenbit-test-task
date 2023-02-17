@@ -1,8 +1,18 @@
 import styled from 'styled-components';
 
 export const Main = styled.main`
-  height: 90vh;
   width: 100%;
-  margin-top: 130px;
-  margin-left: 150px;
+
+  padding-top: 100px;
+  padding-left: 150px;
+
+  @media screen and (max-width: 1120px) {
+    margin: 0 auto;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding-top: 50px;
+  }
 `;

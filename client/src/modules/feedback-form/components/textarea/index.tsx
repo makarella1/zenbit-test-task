@@ -9,7 +9,7 @@ export interface TextareaProps extends React.ComponentPropsWithRef<'textarea'> {
 export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ error, ...props }, ref) => (
     <div>
-      <StyledTextarea error={error} ref={ref} {...props} />
+      <StyledTextarea error={error} ref={ref as any} {...props} />
       {error && <TextareaError>{error.message}</TextareaError>}
     </div>
   ),

@@ -3,8 +3,8 @@ import { InputProps } from '.';
 
 export const StyledInput = styled.input<InputProps>`
   width: 100%;
-  border: ${(props) =>
-    `1px solid ${props.error ? 'red' : props.theme.inputBorder}`};
+  border: 1px solid
+    ${(props) => (props.error ? 'red' : props.theme.inputBorder)};
   border-radius: 10px;
   padding: 30px 45px;
   font-size: 16px;
@@ -12,7 +12,7 @@ export const StyledInput = styled.input<InputProps>`
   color: ${(props) => props.error && 'red'};
 
   :focus {
-    border: ${(props) => `1px solid ${props.error ? 'red' : 'black'}`};
+    border: 1px solid ${(props) => (props.error ? 'red' : 'black')};
   }
 
   ::placeholder {

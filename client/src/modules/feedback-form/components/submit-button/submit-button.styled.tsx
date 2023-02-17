@@ -19,4 +19,8 @@ export const StyledSubmitButton = styled.button`
   :hover {
     color: black;
   }
+
+  @media screen and (max-width: 1120px) {
+    align-self: stretch;
+  }
 `;

@@ -22,7 +22,11 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'ApercuArabicPro';
   }
 
-  body {
+  body, 
+  #root {
     overflow: hidden;
+    
+    width: 100%;
+    height: 100%;
   }
 `;
