@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const StyledFooter = styled.footer`
-  height: 150px;
+  height: 170px;
   width: 100%;
+
+  z-index: 3;
 
   position: fixed;
   bottom: 0;

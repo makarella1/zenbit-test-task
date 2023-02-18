@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
-export const Smile = styled.span`
+export const Smile = styled.div`
   position: absolute;
   right: 0;
   left: 0;
-  z-index: 10;
+  z-index: 2;
 `;
 
 export const FirstSmallYellowSmile = styled(Smile)`
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 568px) {
     display: none;
   }
 `;
@@ -56,7 +56,7 @@ export const BigYellowSmile = styled(Smile)`
 
 export const StyledGreenSmile = styled(Smile)`
   bottom: 0;
-  transform: translateX(85%) translateY(-46%);
+  transform: translateX(85%) translateY(-66%);
 `;
 
 export const StyledContainer = styled.div`

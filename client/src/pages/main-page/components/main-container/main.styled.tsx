@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Main = styled.main`
   width: 100%;
 
-  padding-top: 100px;
+  padding-top: 80px;
   padding-left: 150px;
 
   @media screen and (max-width: 1120px) {

@@ -1,11 +1,15 @@
 import { useForm } from 'react-hook-form';
 import { classValidatorResolver } from '@hookform/resolvers/class-validator';
 
-import { Input } from '../input';
-import { Textarea } from '../textarea';
+import { Success } from '@/modules/feedback-form/components/success';
+import { Input } from '@/modules/feedback-form/components/input';
+import { Textarea } from '@/modules/feedback-form/components/textarea';
 import { StyledFeedbackForm } from './feedback-form.styled';
-import { StyledSubmitButton } from '../submit-button';
-import { Feedback } from '../../lib/validators';
+import { StyledSubmitButton } from '@/modules/feedback-form/components/submit-button';
+import { Feedback } from '@/modules/feedback-form/lib/validators';
+import { createFeedback } from '@/modules/feedback-form/api';
+
+import React from 'react';
 
 interface FormValues {
   name: string;
@@ -14,27 +18,30 @@ interface FormValues {
 }
 
 export const FeedbackForm = () => {
+  const [isSuccess, setIsSuccess] = React.useState(false);
+
   const {
     register,
     handleSubmit,
+    setError,
     formState: { errors },
   } = useForm<FormValues>({
     resolver: classValidatorResolver(Feedback),
   });
 
-  const onSubmit = async (data: FormValues) => {
-    console.log(JSON.stringify(data));
+  const onSubmit = async (formData: FormValues) => {
+    const { data, error } = await createFeedback(formData);
 
-    await fetch('http://localhost:3000/api/feedback', {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    if (error && error.message) {
+      setError('email', { message: error.message });
+    }
+
+    if (data.success) {
+      setIsSuccess(data.success);
+    }
   };
 
-  return (
+  return !isSuccess ? (
     <StyledFeedbackForm onSubmit={handleSubmit(onSubmit)}>
       <Input
         placeholder="Your name *"
@@ -53,5 +60,7 @@ export const FeedbackForm = () => {
       />
       <StyledSubmitButton>Send Message</StyledSubmitButton>
     </StyledFeedbackForm>
+  ) : (
+    <Success />
   );
 };

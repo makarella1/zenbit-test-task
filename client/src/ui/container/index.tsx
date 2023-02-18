@@ -1,7 +1,7 @@
-import { SmallYellowSmile } from '../lib/small-yellow-smile';
-import { PinkSmile } from '../lib/pink-smile';
-import { YellowSmile } from '../lib/yellow-smile';
-import { GreenSmile } from '../lib/green-smile';
+import { SmallYellowSmile } from '@/ui/lib/small-yellow-smile';
+import { PinkSmile } from '@/ui/lib/pink-smile';
+import { YellowSmile } from '@/ui/lib/yellow-smile';
+import { GreenSmile } from '@/ui/lib/green-smile';
 import {
   StyledContainer,
   FirstSmallYellowSmile,
