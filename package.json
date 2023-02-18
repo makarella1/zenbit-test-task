@@ -8,12 +8,16 @@
     "server"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client:dev": "npm run dev --workspace=client",
+    "server:dev": "npm run dev --workspace=server",
+    "start": "concurrently \"npm run client:dev\" \"npm run server:dev\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "class-validator": "^0.14.0"
+    "class-validator": "^0.14.0",
+    "concurrently": "^7.6.0"
   }
 }
