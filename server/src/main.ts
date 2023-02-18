@@ -14,6 +14,6 @@ async function bootstrap() {
     origin: [configServcie.get<string>('CLIENT_URL')],
   });
 
-  await app.listen(+configServcie.get('SERVER_PORT'));
+  await app.listen(+configServcie.get('PORT'));
 }
 bootstrap();
