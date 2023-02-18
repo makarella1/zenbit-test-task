@@ -19,9 +19,11 @@ interface Response {
   error?: ApiError;
 }
 
+const URL = `http://localhost:${import.meta.env.VITE_PORT}/api/feedback`;
+
 export const createFeedback = async (data: FormValues): Promise<Response> => {
   try {
-    const response = await fetch('http://localhost:3000/api/feedback', {
+    const response = await fetch(URL, {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
