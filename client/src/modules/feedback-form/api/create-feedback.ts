@@ -19,7 +19,7 @@ interface Response {
   error?: ApiError;
 }
 
-const URL = `http://localhost:${import.meta.env.VITE_PORT}/api/feedback`;
+const URL = `${import.meta.env.VITE_SERVER_URL}/api/feedback`;
 
 export const createFeedback = async (data: FormValues): Promise<Response> => {
   try {
