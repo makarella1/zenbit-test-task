@@ -11,9 +11,9 @@ async function bootstrap() {
   app.setGlobalPrefix('api');
 
   app.enableCors({
-    origin: [`http://localhost:${+configServcie.get('CLIENT_PORT')}`],
+    origin: [`http://localhost:${+configServcie.get('PORT')}`],
   });
 
-  await app.listen(+configServcie.get('PORT'));
+  await app.listen(+configServcie.get('SERVER_PORT'));
 }
 bootstrap();
