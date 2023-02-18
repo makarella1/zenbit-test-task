@@ -22,14 +22,6 @@ export const SecondSmallYellowSmile = styled(Smile)`
   }
 `;
 
-export const FirstPinkSmile = styled(Smile)`
-  transform: translateY(240%);
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`;
-
 export const SecondPinkSmile = styled(Smile)`
   transform: translateX(65%) translateY(140%);
 
@@ -56,7 +48,7 @@ export const BigYellowSmile = styled(Smile)`
 
 export const StyledGreenSmile = styled(Smile)`
   bottom: 0;
-  transform: translateX(85%) translateY(-66%);
+  transform: translateX(85%) translateY(-23%);
 `;
 
 export const StyledContainer = styled.div`

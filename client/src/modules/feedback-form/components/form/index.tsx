@@ -19,6 +19,7 @@ interface FormValues {
 
 export const FeedbackForm = () => {
   const [isSuccess, setIsSuccess] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(false);
 
   const {
     register,
@@ -30,7 +31,11 @@ export const FeedbackForm = () => {
   });
 
   const onSubmit = async (formData: FormValues) => {
+    setIsLoading(true);
+
     const { data, error } = await createFeedback(formData);
+
+    setIsLoading(false);
 
     if (error && error.message) {
       setError('email', { message: error.message });
@@ -58,7 +63,9 @@ export const FeedbackForm = () => {
         {...register('message')}
         error={errors.message}
       />
-      <StyledSubmitButton>Send Message</StyledSubmitButton>
+      <StyledSubmitButton disabled={isLoading}>
+        {!isLoading ? 'Send Message' : 'Loading...'}
+      </StyledSubmitButton>
     </StyledFeedbackForm>
   ) : (
     <Success />

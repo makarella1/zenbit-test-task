@@ -20,6 +20,10 @@ export const StyledSubmitButton = styled.button`
     color: black;
   }
 
+  :disabled {
+    pointer-events: none;
+  }
+
   @media screen and (max-width: 1120px) {
     align-self: stretch;
   }

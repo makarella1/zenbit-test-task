@@ -4,7 +4,7 @@ export const MapImage = styled.img`
   position: absolute;
   top: 0;
   right: 0;
-  transform: translateX(20%) translateY(-10%);
+  transform: translateX(20%) translateY(-15%);
   width: 800px;
   height: 800px;
 

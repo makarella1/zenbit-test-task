@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 
 export const StyledFooter = styled.footer`
-  height: 170px;
+  height: 125px;
   width: 100%;
-
-  z-index: 3;
 
   position: fixed;
   bottom: 0;
@@ -18,10 +16,12 @@ export const Links = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 40px;
   margin-left: 345px;
 
+  z-index: 10;
+
   @media screen and (max-width: 1120px) {
-    margin: 60px auto;
+    margin: 40px auto;
   }
 `;

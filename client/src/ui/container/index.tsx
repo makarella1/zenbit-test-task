@@ -5,7 +5,6 @@ import { GreenSmile } from '@/ui/lib/green-smile';
 import {
   StyledContainer,
   FirstSmallYellowSmile,
-  FirstPinkSmile,
   SecondPinkSmile,
   BigYellowSmile,
   SecondSmallYellowSmile,
@@ -20,9 +19,6 @@ export const Container = ({ children }: React.PropsWithChildren) => (
     <SecondSmallYellowSmile>
       <SmallYellowSmile />
     </SecondSmallYellowSmile>
-    <FirstPinkSmile>
-      <PinkSmile />
-    </FirstPinkSmile>
     <SecondPinkSmile>
       <PinkSmile />
     </SecondPinkSmile>

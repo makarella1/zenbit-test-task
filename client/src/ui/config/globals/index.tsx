@@ -3,13 +3,13 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyles = createGlobalStyle`
   @font-face {
     font-family: 'ApercuArabicPro';
-    src: url('../../../../public/ApercuArabicPro-Regular.woff2');
+    src: url('ApercuArabicPro-Regular.woff2');
     font-weight: 400;
     font-style: normal;
   }
   @font-face {
     font-family: 'ApercuArabicPro';
-    src: url('../../../../public/ApercuArabicPro-Medium.woff2');
+    src: url('ApercuArabicPro-Medium.woff2');
     font-weight: 500;
     font-style: normal;
   }
